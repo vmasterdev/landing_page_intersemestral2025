@@ -44,14 +44,18 @@
     <div id="statusBar" class="w-full text-center text-sm md:text-base py-2 px-3 text-white bg-brand-blue"></div>
 
     <!-- Hero con banner -->
-    <header class="hero" style="--hero-image: url('./banner.jpg');">
-      <div class="container mx-auto px-4">
-        <div class="sr-only">
-          <h1>Intersemestrales 2025–80 · Rectoría Centro Sur</h1>
-          <p>Diciembre 2025 – Enero 2026</p>
-        </div>
-      </div>
+    <link rel="preload" src="https://imgur.com/4n8Aj0r" as="image">
+    <link rel="preload" src="https://imgur.com/4n8Aj0r" as="image">
+    <header class="bg-[#1e2a78]">
+    <div class="container mx-auto px-4 py-4">
+        <img
+        src="./banner.jpg?v=2"
+        alt="Intersemestrales 2025–80 • Rectoría Centro Sur"
+        class="w-full h-[280px] md:h-[300px] object-contain bg-[#1e2a78]"
+        />
+    </div>
     </header>
+
 
     <!-- Sección principal clara y directa -->
     <main class="container mx-auto px-4">
@@ -145,6 +149,8 @@
         <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-white text-brand-blue font-semibold px-5 py-2">Formulario</a>
       </div>
     </footer>
+
+    <script id="robust-loader">// inyectado para soporte local/Vercel</script>
 
     <script>
       // Estado (sin controles del usuario)
