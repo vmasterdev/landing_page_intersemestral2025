@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Intersemestral 2025–2026 • Rectoría Centro Sur</title>
+    <title>Intersemestrales 2025–80 • Rectoría Centro Sur</title>
     <meta name="description" content="Preinscripción a cursos intersemestrales 2025–2026 (Diciembre 2025 – Enero 2026) • Rectoría Centro Sur • UNIMINUTO." />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Intersemestral 2025–2026 • Rectoría Centro Sur" />
-    <meta property="og:description" content="¡Prográmate! Preinscríbete del 5 al 12 de noviembre de 2025. Matrícula en diciembre. Formación en enero de 2026." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/banner.png" />
-    <meta property="og:locale" content="es_CO" />
 
     <!-- Tailwind (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,208 +15,153 @@
           extend: {
             colors: {
               brand: {
-                50: '#eff6ff',
-                100: '#dbeafe',
-                200: '#bfdbfe',
-                300: '#93c5fd',
-                400: '#60a5fa',
-                500: '#3b82f6', // azul
-                600: '#2563eb',
-                700: '#1d4ed8',
-                800: '#1e40af',
-                900: '#1e3a8a',
-              },
-              accent: '#fbbf24', // dorado
-            },
-          },
-        },
-      };
+                blue: '#1e2a78', // azul institucional
+                yellow: '#f4c300', // acento amarillo
+                ink: '#0b1120',
+              }
+            }
+          }
+        }
+      }
     </script>
 
     <style>
-      .glass { backdrop-filter: saturate(180%) blur(14px); }
+      /* Estilo minimal, sin controles para el usuario */
+      .hero {
+        background-image: var(--hero-image);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; /* mostramos el banner completo (1300x250) */
+        background-color: #1e2a78; /* azul de base para bandas laterales */
+        min-height: 260px;
+      }
+      @media (min-width: 1024px){ .hero{ min-height: 300px; } }
+      .card { box-shadow: 0 10px 24px rgba(2, 6, 23, .08); }
     </style>
   </head>
-  <body class="antialiased text-slate-800 bg-gradient-to-b from-slate-50 to-slate-100">
-    <!-- Announcement bar -->
-    <div id="statusBar" class="w-full text-center text-sm md:text-base py-2 px-3 bg-brand-900 text-white"></div>
+  <body class="antialiased text-slate-800 bg-slate-50">
+    <!-- Barra de estado simple (sin interacción) -->
+    <div id="statusBar" class="w-full text-center text-sm md:text-base py-2 px-3 text-white bg-brand-blue"></div>
 
-    <!-- Hero -->
-    <header class="relative">
-      <img src="/banner.png" alt="UNIMINUTO Rectoría Centro Sur Intersemestral 2025–80" class="w-full h-[44vh] md:h-[60vh] object-cover object-center" />
-      <div class="absolute inset-0 bg-brand-900/60"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="container mx-auto px-4">
-          <div class="max-w-3xl glass bg-white/10 rounded-2xl p-6 md:p-8 text-white shadow-xl">
-            <span class="inline-flex items-center gap-2 text-sm md:text-base bg-accent text-slate-900 font-semibold rounded-full px-3 py-1">
-              Rectoría Centro Sur
-              <span class="hidden md:inline">• Intersemestral 2025–80</span>
-            </span>
-            <h1 class="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
-              Cursos Intersemestrales 2025–2026
-            </h1>
-            <p class="mt-3 md:mt-4 text-slate-100/90 text-base md:text-lg">
-              Diciembre 2025 – Enero 2026. Preinscríbete para adelantar o ponerte al día con tus asignaturas.
-            </p>
-            <div class="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex justify-center items-center gap-2 rounded-xl bg-accent text-slate-900 font-bold px-6 py-3 shadow hover:shadow-md focus:outline-none focus:ring-4 focus:ring-accent/60">
-                📝 Ir al formulario
-              </a>
-              <a href="#detalles" class="inline-flex justify-center items-center gap-2 rounded-xl bg-white/10 text-white font-semibold px-6 py-3 ring-1 ring-white/30 hover:bg-white/20 focus:outline-none focus:ring-4 focus:ring-white/30">
-                Ver detalles
-              </a>
-            </div>
-          </div>
+    <!-- Hero con banner -->
+    <header class="hero" style="--hero-image: url('./banner.jpg');">
+      <div class="container mx-auto px-4">
+        <div class="sr-only">
+          <h1>Intersemestrales 2025–80 · Rectoría Centro Sur</h1>
+          <p>Diciembre 2025 – Enero 2026</p>
         </div>
       </div>
     </header>
 
-    <!-- Fechas clave -->
-    <section id="fechas" class="container mx-auto px-4 py-12 md:py-16">
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
-          <p class="text-xs uppercase tracking-widest text-slate-500">Ventana de preinscripción</p>
-          <h3 class="mt-2 text-2xl font-bold">5 → 12 de noviembre 2025</h3>
-          <p class="mt-2 text-slate-600">Registra tus datos y selecciona la asignatura de interés.</p>
+    <!-- Sección principal clara y directa -->
+    <main class="container mx-auto px-4">
+      <section class="-mt-8 md:-mt-10">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 card">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p class="text-xs uppercase tracking-widest text-slate-500">Preinscripción • Periodo 2025–80</p>
+              <h2 class="text-2xl md:text-3xl font-extrabold text-brand-blue">Cursos Intersemestrales • Rectoría Centro Sur</h2>
+              <p class="mt-2 text-slate-700">Adelanta o recupérate en vacaciones. Preinscríbete y verifica la disponibilidad de tu asignatura.</p>
+            </div>
+            <div>
+              <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-brand-blue text-white font-semibold px-6 py-3 hover:opacity-95 focus:outline-none focus:ring-4 focus:ring-brand-blue/30">📝 Ir al formulario</a>
+            </div>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+      </section>
+
+      <section class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
+          <p class="text-xs uppercase tracking-widest text-slate-500">Preinscripción</p>
+          <h3 class="mt-2 text-xl font-bold">5 → 12 de noviembre 2025</h3>
+          <p class="mt-2 text-slate-600">Diligencia tus datos y consulta oferta disponible.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
           <p class="text-xs uppercase tracking-widest text-slate-500">Matrícula y pagos</p>
-          <h3 class="mt-2 text-2xl font-bold">Diciembre 2025</h3>
-          <p class="mt-2 text-slate-600">Los programas informarán los pasos de matrícula y pagos.</p>
+          <h3 class="mt-2 text-xl font-bold">Diciembre 2025</h3>
+          <p class="mt-2 text-slate-600">Tu programa informará el proceso.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow border border-slate-200">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
           <p class="text-xs uppercase tracking-widest text-slate-500">Desarrollo académico</p>
-          <h3 class="mt-2 text-2xl font-bold">Enero 2026</h3>
-          <p class="mt-2 text-slate-600">Inicio de clases de cursos intersemestrales.</p>
+          <h3 class="mt-2 text-xl font-bold">Enero 2026</h3>
+          <p class="mt-2 text-slate-600">Inicio de clases intersemestrales.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Detalles -->
-    <section id="detalles" class="bg-white border-y border-slate-200">
-      <div class="container mx-auto px-4 py-12 md:py-16">
-        <div class="grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <h2 class="text-3xl md:text-4xl font-extrabold">Información clave</h2>
-            <ul class="mt-6 space-y-3 text-slate-700 leading-relaxed">
-              <li>🔹 La <strong>preinscripción</strong> nos permite organizar tu proceso formativo.</li>
-              <li>🔹 La <strong>matrícula y el pago</strong> se realizarán en <strong>diciembre de 2025</strong>.</li>
-              <li>🔹 La <strong>formación</strong> se desarrollará en <strong>enero de 2026</strong>.</li>
-              <li>🔹 Podrás inscribir <strong>hasta 6 créditos académicos</strong>.</li>
-              <li>🔹 Mantente atent@ a las comunicaciones de tu <strong>programa académico</strong>.</li>
-            </ul>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex justify-center items-center gap-2 rounded-xl bg-brand-600 text-white font-semibold px-6 py-3 shadow hover:bg-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-300">Completar preinscripción</a>
-              <a href="#faq" class="inline-flex justify-center items-center gap-2 rounded-xl bg-slate-100 text-slate-900 font-semibold px-6 py-3 shadow hover:bg-slate-200">Preguntas frecuentes</a>
-            </div>
+      <section class="mt-10 grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 card">
+          <h3 class="text-xl font-bold text-brand-blue">Información clave</h3>
+          <ul class="mt-4 space-y-2 text-slate-700">
+            <li>• La <strong>preinscripción</strong> organiza la oferta y grupos.</li>
+            <li>• La <strong>matrícula y el pago</strong> se realizan en <strong>diciembre de 2025</strong>.</li>
+            <li>• La <strong>formación</strong> se desarrolla en <strong>enero de 2026</strong>.</li>
+            <li>• Puedes inscribir <strong>hasta 6 créditos</strong>.</li>
+            <li>• Cualquier inquietud, escribe a tu <strong>programa académico</strong>.</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 card">
+          <h3 class="text-xl font-bold text-brand-blue">Datos del periodo</h3>
+          <div class="mt-4 grid grid-cols-2 gap-4">
+            <div class="rounded-xl border border-slate-200 p-4 bg-slate-50"><p class="text-xs text-slate-500">Rectoría</p><p class="font-semibold">Centro Sur</p></div>
+            <div class="rounded-xl border border-slate-200 p-4 bg-slate-50"><p class="text-xs text-slate-500">Periodo</p><p class="font-semibold">2025–80</p></div>
+            <div class="rounded-xl border border-slate-200 p-4 bg-slate-50"><p class="text-xs text-slate-500">Máx. créditos</p><p class="font-semibold">6</p></div>
+            <div class="rounded-xl border border-slate-200 p-4 bg-slate-50"><p class="text-xs text-slate-500">Fechas</p><p class="font-semibold">Dic 2025 – Ene 2026</p></div>
           </div>
-
-          <div class="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm">
-            <h3 class="text-xl font-bold">Oferta y disponibilidad</h3>
-            <p class="mt-2 text-slate-700">En el formulario podrás verificar si tu asignatura está disponible dentro de la oferta intersemestral. La apertura de grupos depende de la demanda y lineamientos académicos.</p>
-            <div class="mt-6 grid grid-cols-2 gap-4">
-              <div class="rounded-xl border border-slate-200 p-4 bg-white"><p class="text-sm text-slate-500">Modalidad</p><p class="font-semibold">Rectoría Centro Sur</p></div>
-              <div class="rounded-xl border border-slate-200 p-4 bg-white"><p class="text-sm text-slate-500">Periodo</p><p class="font-semibold">2025–80</p></div>
-              <div class="rounded-xl border border-slate-200 p-4 bg-white"><p class="text-sm text-slate-500">Máx. créditos</p><p class="font-semibold">6</p></div>
-              <div class="rounded-xl border border-slate-200 p-4 bg-white"><p class="text-sm text-slate-500">Fechas</p><p class="font-semibold">Dic 2025 – Ene 2026</p></div>
-            </div>
+          <div class="mt-6">
+            <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-brand-blue text-white font-semibold px-6 py-3 hover:opacity-95 focus:outline-none focus:ring-4 focus:ring-brand-blue/30">Completar preinscripción</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="container mx-auto px-4 py-12 md:py-16">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Preguntas frecuentes</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm" open>
-          <summary class="cursor-pointer text-lg font-semibold select-none flex items-center justify-between">
-            ¿Para qué sirve la preinscripción?
-            <span class="ml-4 text-slate-500 group-open:hidden">+</span>
-            <span class="ml-4 text-slate-500 hidden group-open:inline">–</span>
-          </summary>
-          <p class="mt-3 text-slate-700">Nos ayuda a organizar la oferta, grupos y horarios de acuerdo con la demanda estudiantil. No sustituye la matrícula.</p>
-        </details>
-        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-          <summary class="cursor-pointer text-lg font-semibold select-none flex items-center justify-between">
-            ¿Cómo sé si mi materia está disponible?
-            <span class="ml-4 text-slate-500 group-open:hidden">+</span>
-            <span class="ml-4 text-slate-500 hidden group-open:inline">–</span>
-          </summary>
-          <p class="mt-3 text-slate-700">Al diligenciar el formulario verás la oferta vigente. La apertura de cursos dependerá de los lineamientos de tu programa.</p>
-        </details>
-        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-          <summary class="cursor-pointer text-lg font-semibold select-none flex items-center justify-between">
-            ¿Cuándo y cómo pago?
-            <span class="ml-4 text-slate-500 group-open:hidden">+</span>
-            <span class="ml-4 text-slate-500 hidden group-open:inline">–</span>
-          </summary>
-          <p class="mt-3 text-slate-700">En <strong>diciembre de 2025</strong> tu programa académico publicará instrucciones de matrícula y pago.</p>
-        </details>
-        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-          <summary class="cursor-pointer text-lg font-semibold select-none flex items-center justify-between">
-            ¿A quién le escribo si tengo dudas?
-            <span class="ml-4 text-slate-500 group-open:hidden">+</span>
-            <span class="ml-4 text-slate-500 hidden group-open:inline">–</span>
-          </summary>
-          <p class="mt-3 text-slate-700">Comunícate directamente con tu <strong>programa académico</strong>; ellos te guiarán en todo el proceso.</p>
-        </details>
-      </div>
-
-      <div class="mt-10 text-center">
-        <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl bg-brand-600 text-white font-bold px-8 py-4 shadow-lg hover:bg-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-300">
-          🚀 Ir al formulario de preinscripción
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="mt-8 py-10 bg-slate-900 text-slate-200">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <p class="font-bold">Intersemestral 2025–2026 • Rectoría Centro Sur</p>
-            <p class="text-sm text-slate-400">La información aquí publicada puede actualizarse según lineamientos académicos.</p>
+      <section class="mt-10">
+        <h3 class="text-xl font-bold text-brand-blue">Preguntas frecuentes</h3>
+        <div class="mt-4 grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
+            <h4 class="font-semibold">¿Para qué sirve la preinscripción?</h4>
+            <p class="mt-2 text-slate-700">Para estimar la demanda y organizar grupos y horarios. No sustituye la matrícula.</p>
           </div>
-          <nav class="flex gap-4 text-sm">
-            <a href="#fechas" class="hover:underline">Fechas</a>
-            <a href="#detalles" class="hover:underline">Detalles</a>
-            <a href="#faq" class="hover:underline">FAQ</a>
-            <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="font-semibold">Formulario</a>
-          </nav>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
+            <h4 class="font-semibold">¿Cómo sé si mi materia está disponible?</h4>
+            <p class="mt-2 text-slate-700">En el formulario verás la oferta vigente para tu programa.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
+            <h4 class="font-semibold">¿Cuándo y cómo pago?</h4>
+            <p class="mt-2 text-slate-700">En <strong>diciembre de 2025</strong> tu programa comunicará instrucciones de matrícula y pago.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 card">
+            <h4 class="font-semibold">¿Con quién resuelvo dudas?</h4>
+            <p class="mt-2 text-slate-700">Con tu <strong>programa académico</strong>; ellos te guiarán en el proceso.</p>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 py-10 bg-brand-blue text-white">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <p class="font-bold">Intersemestrales 2025–80 • Rectoría Centro Sur</p>
+          <p class="text-sm text-white/80">La información publicada puede actualizarse según lineamientos académicos.</p>
+        </div>
+        <a href="https://forms.office.com/r/GnHMNPaG6n" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-white text-brand-blue font-semibold px-5 py-2">Formulario</a>
       </div>
     </footer>
 
     <script>
-      // Estado dinámico de la preinscripción (abierta/cerrada/futura)
+      // Estado (sin controles del usuario)
       (function () {
         const statusEl = document.getElementById('statusBar');
-        const tzOffset = -5; // CO
+        const tzOffset = -5; // Colombia (CO)
         const now = new Date();
         const y = 2025;
         const start = new Date(Date.UTC(y, 10, 5, 5 - tzOffset));  // 5 Nov 2025 00:00 (CO)
-        const end = new Date(Date.UTC(y, 10, 13, 5 - tzOffset));   // 13 Nov 2025 00:00 (CO) -> exclusive
+        const end = new Date(Date.UTC(y, 10, 13, 5 - tzOffset));   // 13 Nov 2025 00:00 (CO)
 
-        let label = '📣 ¡Prográmate desde ahora!';
-        let detail = 'Preinscríbete del 5 al 12 de noviembre de 2025.';
-        let bg = 'bg-brand-900';
+        let label = '📣 Preinscripción 5–12 de noviembre de 2025';
+        if (now < start) label = '⏳ Preinscripción: abre el 5 de noviembre de 2025';
+        else if (now >= start && now < end) label = '✅ Preinscripción abierta: hasta el 12 de noviembre de 2025';
+        else if (now >= end) label = '🛑 Preinscripción cerrada: permanece atent@ a tu programa académico';
 
-        if (now < start) {
-          label = '⏳ Preinscripción próximamente';
-          detail = 'Apertura: 5 de noviembre de 2025.';
-          bg = 'bg-brand-800';
-        } else if (now >= start && now < end) {
-          label = '✅ Preinscripción abierta';
-          detail = 'Cierra el 12 de noviembre de 2025.';
-          bg = 'bg-emerald-700';
-        } else if (now >= end) {
-          label = '🛑 Preinscripción cerrada';
-          detail = 'Sigue atento a las comunicaciones de tu programa académico.';
-          bg = 'bg-rose-700';
-        }
-        statusEl.className = statusEl.className.replace(/bg-[^ ]+/g, '').trim() + ' ' + bg;
-        statusEl.textContent = `${label} · ${detail}`;
+        statusEl.textContent = label;
       })();
     </script>
   </body>
