@@ -15,9 +15,9 @@
           extend: {
             colors: {
               brand: {
-                blue: '#1e2a78', // azul institucional
-                yellow: '#f4c300', // acento amarillo
-                ink: '#0b1120',
+                blue: '#1e2a78',
+                yellow: '#f4c300',
+                ink: '#0b1120'
               }
             }
           }
@@ -26,38 +26,19 @@
     </script>
 
     <style>
-      /* Estilo minimal, sin controles para el usuario */
-      .hero {
-        background-image: var(--hero-image);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain; /* mostramos el banner completo (1300x250) */
-        background-color: #1e2a78; /* azul de base para bandas laterales */
-        min-height: 260px;
-      }
-      @media (min-width: 1024px){ .hero{ min-height: 300px; } }
       .card { box-shadow: 0 10px 24px rgba(2, 6, 23, .08); }
     </style>
   </head>
   <body class="antialiased text-slate-800 bg-slate-50">
-    <!-- Barra de estado simple (sin interacción) -->
     <div id="statusBar" class="w-full text-center text-sm md:text-base py-2 px-3 text-white bg-brand-blue"></div>
 
-    <!-- Hero con banner -->
-    <link rel="preload" src="https://imgur.com/4n8Aj0r" as="image">
-    <link rel="preload" src="https://imgur.com/4n8Aj0r" as="image">
-    <header class="bg-[#1e2a78]">
-    <div class="container mx-auto px-4 py-4">
-        <img
-        src="./banner.jpg?v=2"
-        alt="Intersemestrales 2025–80 • Rectoría Centro Sur"
-        class="w-full h-[280px] md:h-[300px] object-contain bg-[#1e2a78]"
-        />
-    </div>
+    <!-- Hero con imagen de Imgur -->
+    <header class="bg-brand-blue">
+      <div class="container mx-auto px-4 py-4">
+        <img src="./banner.png" alt="Intersemestrales 2025–80 • Rectoría Centro Sur" />
+      </div>
     </header>
 
-
-    <!-- Sección principal clara y directa -->
     <main class="container mx-auto px-4">
       <section class="-mt-8 md:-mt-10">
         <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 card">
@@ -150,17 +131,14 @@
       </div>
     </footer>
 
-    <script id="robust-loader">// inyectado para soporte local/Vercel</script>
-
     <script>
-      // Estado (sin controles del usuario)
       (function () {
         const statusEl = document.getElementById('statusBar');
-        const tzOffset = -5; // Colombia (CO)
+        const tzOffset = -5;
         const now = new Date();
         const y = 2025;
-        const start = new Date(Date.UTC(y, 10, 5, 5 - tzOffset));  // 5 Nov 2025 00:00 (CO)
-        const end = new Date(Date.UTC(y, 10, 13, 5 - tzOffset));   // 13 Nov 2025 00:00 (CO)
+        const start = new Date(Date.UTC(y, 10, 5, 5 - tzOffset));
+        const end = new Date(Date.UTC(y, 10, 13, 5 - tzOffset));
 
         let label = '📣 Preinscripción 5–12 de noviembre de 2025';
         if (now < start) label = '⏳ Preinscripción: abre el 5 de noviembre de 2025';
